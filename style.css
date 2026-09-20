@@ -1,0 +1,166 @@
+:root {
+  --ink: #1f2e22;
+  --linen: #f3f6ee;
+  --sage: #6b7f5e;
+  --honey: #c08552;
+  --plum: #8e6c88;
+  --line: #d8d3c4;
+  --white: #fffdf8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--linen);
+  color: var(--ink);
+  font-family: "Work Sans", -apple-system, sans-serif;
+  line-height: 1.55;
+}
+
+h1, h2, h3 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 500;
+  line-height: 1.15;
+  margin: 0 0 0.4em;
+}
+
+a { color: var(--sage); }
+
+.wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Nav */
+nav.tabs {
+  border-bottom: 1px solid var(--line);
+  background: var(--white);
+}
+nav.tabs .wrap {
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  max-width: 760px;
+}
+nav.tabs a {
+  display: block;
+  padding: 16px 14px;
+  text-decoration: none;
+  color: var(--ink);
+  font-size: 0.95rem;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+}
+nav.tabs a.active {
+  color: var(--sage);
+  border-bottom-color: var(--sage);
+}
+
+/* Hero */
+header.hero {
+  padding: 72px 0 48px;
+  border-bottom: 1px solid var(--line);
+}
+header.hero .eyebrow {
+  color: var(--honey);
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+header.hero h1 {
+  font-size: clamp(2.4rem, 6vw, 3.6rem);
+  max-width: 11ch;
+}
+header.hero p {
+  max-width: 46ch;
+  font-size: 1.1rem;
+}
+
+main {
+  padding: 48px 0 80px;
+}
+main h2 {
+  font-size: 1.8rem;
+  margin-top: 2.2em;
+}
+main h2:first-child { margin-top: 0; }
+main p { max-width: 62ch; }
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 20px 24px;
+  margin: 18px 0;
+}
+
+.timeline { list-style: none; padding: 0; margin: 24px 0; }
+.timeline li {
+  display: flex;
+  gap: 20px;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+}
+.timeline li:last-child { border-bottom: 1px solid var(--line); }
+.timeline time {
+  flex: 0 0 90px;
+  color: var(--plum);
+  font-weight: 600;
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 28px 0;
+  font-size: 0.9rem;
+  color: #5b6357;
+}
+
+/* Password gate */
+body.locked > *:not(#gate) { display: none !important; }
+#gate {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+#gate .box {
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 40px 36px;
+  max-width: 360px;
+  width: 100%;
+  text-align: left;
+}
+#gate h1 {
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+}
+#gate p {
+  font-size: 0.95rem;
+  color: #5b6357;
+  margin-top: 0;
+}
+#gate input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  background: var(--linen);
+  font-size: 1rem;
+  margin: 14px 0 10px;
+}
+#gate button {
+  width: 100%;
+  padding: 10px 12px;
+  background: var(--sage);
+  color: var(--white);
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+#gate .error {
+  color: #a03d3d;
+  font-size: 0.9rem;
+  min-height: 1.2em;
+  margin-top: 8px;
+}

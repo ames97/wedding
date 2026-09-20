@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Venue & Details — Firstname & Partner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="auth.js" defer></script>
+</head>
+<body>
+
+<nav class="tabs">
+  <div class="wrap">
+    <a href="index.html">Home</a>
+    <a href="venue.html" class="active">Venue & Details</a>
+    <a href="schedule.html">Schedule</a>
+    <a href="travel.html">Travel & Stay</a>
+    <a href="rsvp.html">RSVP</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Where to find us</div>
+    <h1>Venue & Details</h1>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <h2>[Venue name]</h2>
+    <p>[Street address, Town, County, Postcode]</p>
+    <p>[A sentence or two describing the venue — what it looks like, why you chose it, anything guests should picture before arriving.]</p>
+
+    <div class="card">
+      <!-- Replace the src below with your venue's Google Maps embed link:
+           Google Maps → search venue → Share → Embed a map → copy the src URL -->
+      <iframe
+        title="Venue map"
+        src="https://www.google.com/maps?q=[VENUE+ADDRESS]&output=embed"
+        width="100%" height="320" style="border:0" loading="lazy">
+      </iframe>
+    </div>
+
+    <h2>Ceremony & reception</h2>
+    <p>The ceremony and reception both take place at [Venue name] — no need to travel between locations. Doors open at [time].</p>
+
+    <h2>Dress code</h2>
+    <p>[e.g. Garden formal — think light fabrics and comfortable shoes; the reception is partly outdoors and on grass.]</p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">Questions? Reach us at [email address].</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>RSVP — Firstname & Partner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="auth.js" defer></script>
+</head>
+<body>
+
+<nav class="tabs">
+  <div class="wrap">
+    <a href="index.html">Home</a>
+    <a href="venue.html">Venue & Details</a>
+    <a href="schedule.html">Schedule</a>
+    <a href="travel.html">Travel & Stay</a>
+    <a href="rsvp.html" class="active">RSVP</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Please respond by [date]</div>
+    <h1>RSVP</h1>
+    <p>Let us know if you're able to join us — one response per household is fine.</p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="card">
+      <!--
+        Replace the src below with your own Google Form's embed link:
+        Google Forms → your form → Send → the "<>" embed icon → copy the src URL
+        (Free, no submission limit — fine for 100 guests.)
+      -->
+      <iframe
+        title="RSVP form"
+        src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true"
+        width="100%" height="900" style="border:0">
+        Loading…
+      </iframe>
+    </div>
+    <p>Trouble with the form? Email us directly at [email address].</p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">Questions? Reach us at [email address].</div>
+</footer>
+
+</body>
+</html>
