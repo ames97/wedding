@@ -77,6 +77,12 @@ header.hero p {
   font-size: 1.1rem;
 }
 
+header.hero--map {
+  background-image: linear-gradient(rgba(243, 246, 238, 0.82), rgba(243, 246, 238, 0.9)), url("img/wasing-map.jpg");
+  background-size: cover;
+  background-position: center 30%;
+}
+
 main {
   padding: 48px 0 80px;
 }
