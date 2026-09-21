@@ -78,7 +78,7 @@ header.hero p {
 }
 
 main.main--map {
-  background-image: linear-gradient(rgba(243, 246, 238, 0.88), rgba(243, 246, 238, 0.93)), url("img/wasing-map.jpg");
+  background-image: linear-gradient(rgba(243, 246, 238, 0.55), rgba(243, 246, 238, 0.65)), url("img/wasing-map.jpg");
   background-size: cover;
   background-position: center top;
 }
