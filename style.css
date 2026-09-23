@@ -136,6 +136,50 @@ main p { max-width: 62ch; }
   opacity: 0.75;
 }
 
+.menu-intro {
+  max-width: 60ch;
+  color: #5b6357;
+  font-size: 0.95rem;
+}
+
+.menu-row {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 18px 28px;
+  padding: 20px 0;
+  border-top: 1px solid var(--line);
+}
+.menu-row:last-of-type {
+  border-bottom: 1px solid var(--line);
+}
+.menu-label {
+  font-family: "Work Sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+  color: var(--plum);
+  padding-top: 2px;
+}
+.menu-dishes p {
+  margin: 0 0 12px;
+  max-width: 56ch;
+}
+.menu-dishes p:last-child {
+  margin-bottom: 0;
+}
+.menu-note {
+  margin-top: 20px;
+  font-size: 0.92rem;
+  color: #5b6357;
+}
+
+@media (max-width: 560px) {
+  .menu-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+}
+
 .timeline { list-style: none; padding: 0; margin: 24px 0; }
 .timeline li {
   display: flex;
