@@ -80,7 +80,7 @@ header.hero p {
 main.main--map {
   background-image: linear-gradient(rgba(243, 246, 238, 0.55), rgba(243, 246, 238, 0.65)), url("img/wasing-map.jpg");
   background-size: contain;
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-position: center top;
 }
 
@@ -184,8 +184,8 @@ main p { max-width: 62ch; }
 header.hero--illustration {
   background-image: linear-gradient(rgba(243, 246, 238, 0.55), rgba(243, 246, 238, 0.55)), url("img/venue-illustration.png");
   background-repeat: no-repeat;
-  background-position: center 60%;
-  background-size: cover;
+  background-position: center;
+  background-size: contain;
 }
 
 .timeline { list-style: none; padding: 0; margin: 24px 0; }
