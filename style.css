@@ -180,6 +180,14 @@ main p { max-width: 62ch; }
   }
 }
 
+.venue-illustration {
+  display: block;
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  margin: 8px auto 32px;
+}
+
 .timeline { list-style: none; padding: 0; margin: 24px 0; }
 .timeline li {
   display: flex;
