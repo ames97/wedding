@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Choose your language / Välj språk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="auth.js" defer></script>
+</head>
+<body>
+
+<main class="lang-select">
+  <div class="wrap lang-select-wrap">
+    <div class="eyebrow">Welcome · Välkommen</div>
+    <h1>Choose your language<br>Välj språk</h1>
+
+    <div class="lang-options">
+      <a href="index.html" class="lang-card" onclick="sessionStorage.setItem('wedding_lang','en')">
+        <svg viewBox="0 0 60 36" xmlns="http://www.w3.org/2000/svg" class="lang-flag">
+          <rect width="60" height="36" fill="#012169"/>
+          <path d="M0,0 L60,36 M60,0 L0,36" stroke="#fff" stroke-width="6"/>
+          <path d="M0,0 L60,36 M60,0 L0,36" stroke="#C8102E" stroke-width="2"/>
+          <path d="M30,0 V36 M0,18 H60" stroke="#fff" stroke-width="10"/>
+          <path d="M30,0 V36 M0,18 H60" stroke="#C8102E" stroke-width="6"/>
+        </svg>
+        <span>English</span>
+      </a>
+
+      <a href="index-sv.html" class="lang-card" onclick="sessionStorage.setItem('wedding_lang','sv')">
+        <svg viewBox="0 0 60 36" xmlns="http://www.w3.org/2000/svg" class="lang-flag">
+          <rect width="60" height="36" fill="#006AA7"/>
+          <rect x="20" width="6" height="36" fill="#FECC02"/>
+          <rect y="15" width="60" height="6" fill="#FECC02"/>
+        </svg>
+        <span>Svenska</span>
+      </a>
+    </div>
+  </div>
+</main>
+
+</body>
+</html>
