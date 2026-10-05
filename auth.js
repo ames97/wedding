@@ -15,6 +15,17 @@ async function sha256(text) {
   return [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, "0")).join("");
 }
 
+// After unlocking, send first-time visitors to the language-select page.
+// Once a language is chosen it's remembered for the rest of the session, so
+// this only interrupts the very first page load after entering the password.
+function maybeRedirectToLanguageSelect() {
+  const lang = sessionStorage.getItem("wedding_lang");
+  const onLanguagePage = /language\.html$/.test(window.location.pathname);
+  if (!lang && !onLanguagePage) {
+    window.location.href = "language.html";
+  }
+}
+
 function buildGate() {
   const gate = document.createElement("div");
   gate.id = "gate";
@@ -38,6 +49,7 @@ function buildGate() {
       sessionStorage.setItem("wedding_unlocked", "true");
       document.body.classList.remove("locked");
       gate.remove();
+      maybeRedirectToLanguageSelect();
     } else {
       document.getElementById("gate-error").textContent = "That's not it — try again.";
     }
@@ -47,4 +59,6 @@ function buildGate() {
 if (sessionStorage.getItem("wedding_unlocked") !== "true") {
   document.body.classList.add("locked");
   document.addEventListener("DOMContentLoaded", buildGate);
+} else {
+  maybeRedirectToLanguageSelect();
 }
