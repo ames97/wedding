@@ -31,8 +31,7 @@ function buildGate() {
   gate.id = "gate";
   gate.innerHTML = `
     <div class="box">
-      <h1>This page is private</h1>
-      <p>Enter the password from the invite to continue.</p>
+      <p>Please enter the password from the invite to continue</p>
       <form id="gate-form">
         <input type="password" id="gate-input" autocomplete="off" autofocus />
         <button type="submit">Enter</button>
