@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Hanna &amp; Niall — 24 September 2027</title>
+<script>
+/* Decide what to show (password / language / site) BEFORE first paint, so nothing flashes. */
+(function () {
+  var d = document.documentElement, s = null, u = false, l = null;
+  try { s = window.sessionStorage; u = s.getItem('wedding_unlocked') === 'true'; l = s.getItem('wedding_lang'); } catch (e) {}
+  if (l !== 'en' && l !== 'sv') l = null;
+  d.lang = l || 'en';
+  d.className = 'js ' + (!u ? 'st-gate' : (!l ? 'st-lang' : 'st-site'));
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="auth.js" defer></script>
+</head>
+<body>
+
+<!-- 1. Password -->
+<div id="gate" role="dialog" aria-label="Password">
+  <div class="gate-box">
+    <p>Please enter the password from the invite to continue</p>
+    <form id="gate-form">
+      <input type="password" id="gate-input" autocomplete="off" aria-label="Password" />
+      <button type="submit">Enter</button>
+      <div class="gate-error" id="gate-error" role="alert"></div>
+    </form>
+  </div>
+</div>
+
+<!-- 2. Language -->
+<div id="lang" role="dialog" aria-label="Language / Språk">
+  <div class="flags">
+    <button class="flag" type="button" data-set-lang="en">
+      <svg viewBox="0 0 60 36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <clipPath id="uk-t"><path d="M30,18 h30 v18 z v18 h-30 z h-30 v-18 z v-18 h30 z"/></clipPath>
+            <filter id="grain-uk" x="0" y="0" width="100%" height="100%">
+            <feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="2" seed="4" result="n"/>
+            <feColorMatrix in="n" type="saturate" values="0"/>
+            <feComponentTransfer><feFuncA type="linear" slope="0.14"/></feComponentTransfer>
+          </filter>
+          </defs>
+          <rect width="60" height="36" fill="#2f3f5f"/>
+          <path d="M0,0 L60,36 M60,0 L0,36" stroke="#ebe5d6" stroke-width="6"/>
+          <path d="M0,0 L60,36 M60,0 L0,36" clip-path="url(#uk-t)" stroke="#9b4743" stroke-width="3.2"/>
+          <path d="M30,0 V36 M0,18 H60" stroke="#ebe5d6" stroke-width="10"/>
+          <path d="M30,0 V36 M0,18 H60" stroke="#9b4743" stroke-width="6"/>
+          <rect width="60" height="36" filter="url(#grain-uk)"/>
+        </svg>
+      <span>English</span>
+    </button>
+    <button class="flag" type="button" data-set-lang="sv">
+      <svg viewBox="0 0 60 36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <filter id="grain-se" x="0" y="0" width="100%" height="100%">
+            <feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="2" seed="9" result="n"/>
+            <feColorMatrix in="n" type="saturate" values="0"/>
+            <feComponentTransfer><feFuncA type="linear" slope="0.14"/></feComponentTransfer>
+          </filter>
+          </defs>
+          <rect width="60" height="36" fill="#3f6685"/>
+          <rect x="18.75" width="7.5" height="36" fill="#cfb066"/>
+          <rect y="14.4" width="60" height="7.2" fill="#cfb066"/>
+          <rect width="60" height="36" filter="url(#grain-se)"/>
+        </svg>
+      <span>Svenska</span>
+    </button>
+  </div>
+</div>
+
+<!-- 3. The site -->
+<div id="site">
+
+  <header class="landing">
+    <h1 class="sr-only">Hanna &amp; Niall — 24 September 2027</h1>
+    <img id="landing-img" src="img/landing-en.jpg" alt="" />
+    <a class="cue" href="#venue" aria-label="Scroll down"></a>
+  </header>
+
+  <main>
+
+<section class="block block--venue" id="venue">
+  <div class="panel rv">
+    <span class="eyebrow"><span class="en">The venue</span><span class="sv">Platsen</span></span>
+    <h2><span class="en">Venue &amp; Details</span><span class="sv">Plats &amp; detaljer</span></h2>
+
+    <div class="item">
+      <h3><span class="en">About the venue</span><span class="sv">Om platsen</span></h3>
+      <p><span class="en">Wasing is a traditional farm hamlet in the Berkshire countryside, sitting next to the 15th-century Parish Church of St Nicholas.</span><span class="sv">Wasing är en lantgårdsby på landsbygden i Berkshire, belägen intill 1400-talskyrkan Parish Church of St Nicholas.</span></p>
+      <p><span class="en">It’s still a working farm, and the beef served on the menu comes from their own herd of Sussex cattle, raised on the estate.</span><span class="sv">Det är fortfarande en fungerande gård, och nötköttet som serveras på menyn kommer från deras egen besättning av Sussex-nötkreatur, uppfödda på gården.</span></p>
+    </div>
+
+    <div class="item">
+      <h3><span class="en">Ceremony &amp; reception</span><span class="sv">Vigsel &amp; mottagning</span></h3>
+      <p><span class="en">The ceremony and reception both take place at Wasing Park. Guests are welcome to arrive from midday and head to the Stables bar, which will be open until half an hour before the wedding ceremony.</span><span class="sv">Både vigseln och mottagningen äger rum på Wasing Park. Gästerna är välkomna att anlända från klockan 12 och gå till Stables-baren, som är öppen fram till en halvtimme före vigseln.</span></p>
+    </div>
+
+    <div class="item">
+      <h3><span class="en">Menu</span><span class="sv">Meny</span></h3>
+      <p class="menu-intro"><span class="en">Three-course menu with a vegetarian option included below.</span><span class="sv">Tre-rätters meny, vegetariskt alternativ inkluderat nedan.</span></p>
+      <div class="menu-wrap">
+<div class="menu-row"><div class="menu-label"><span class="en">Starter</span><span class="sv">Förrätt</span></div><div class="menu-dishes">
+<p><span class="en">Hot smoked chalk stream trout, potato and leek velouté, crème fraîche and herring roe (GF)</span><span class="sv">Varmrökt forell, potatis- och purjolöksvelouté, crème fraîche och stenbitsrom (GF)</span></p>
+<p class="or"><span class="en">or</span><span class="sv">eller</span></p>
+<p><span class="en">Burrata, blood orange, chicory and pomegranate salad with burnt orange dressing (V, GF)</span><span class="sv">Burrata, blodapelsin, cikoria och granatäpplesallad med brynt apelsindressing (V, GF)</span></p>
+</div></div>
+<div class="menu-row"><div class="menu-label"><span class="en">Main course</span><span class="sv">Huvudrätt</span></div><div class="menu-dishes">
+<p><span class="en">Braised blade of beef, bacon, shallot and mushroom, caramelised onion mash and red wine sauce (GF)</span><span class="sv">Braiserad högrev, bacon, schalottenlök och svamp, karamelliserat löksmör och rödvinssås (GF)</span></p>
+<p class="or"><span class="en">or</span><span class="sv">eller</span></p>
+<p><span class="en">Broad bean and feta linguini with fennel, sundried tomatoes and hazelnut pesto (V)</span><span class="sv">Bondböns- och fetalinguine med fänkål, soltorkade tomater och hasselnötspesto (V)</span></p>
+</div></div>
+<div class="menu-row"><div class="menu-label"><span class="en">Dessert</span><span class="sv">Efterrätt</span></div><div class="menu-dishes">
+<p><span class="en">Sticky toffee pudding with caramelised banana, caramel sauce and vanilla ice cream (V)</span><span class="sv">Sticky toffee pudding med karamelliserad banan, kolasås och vaniljglass (V)</span></p>
+</div></div>
+<div class="menu-row"><div class="menu-label"><span class="en">Evening food</span><span class="sv">Kvällsmat</span></div><div class="menu-dishes">
+<p><span class="en">Pizza will be served later in the evening for anyone in need of a little fuel for the dance floor 🍕 💃</span><span class="sv">Pizza serveras senare på kvällen för alla som behöver lite extra bränsle till dansgolvet 🍕 💃</span></p>
+<p><span class="en">Artichoke, sun-blushed tomato and piquillo peppers</span><span class="sv">Kronärtskocka, soltorkad tomat och piquillopaprika</span></p>
+<p><span class="en">Prosciutto, buffalo mozzarella, truffle oil and grana padano</span><span class="sv">Prosciutto, buffelmozzarella, tryffelolja och grana padano</span></p>
+</div></div>
+      </div>
+      <p class="menu-note"><span class="en">Please see the <a href="#faq">FAQs</a> for info on dietary requirements.</span><span class="sv">Se <a href="#faq">Vanliga frågor</a> för information om specialkost.</span></p>
+    </div>
+  </div>
+</section>
+
+
+<section class="block" id="schedule">
+  <div class="inner rv">
+    <div class="illus-head">
+      <span class="eyebrow"><span class="en">Friday, 24 September 2027</span><span class="sv">Fredag 24 september 2027</span></span>
+      <h2><span class="en">The Big Day</span><span class="sv">Den stora dagen</span></h2>
+    </div>
+    <ul class="timeline">
+      <li><time><span class="en">12:00 pm</span><span class="sv">12:00</span></time><div><p><strong><span class="en">Guests arrive</span><span class="sv">Gästerna anländer</span></strong> <span class="place"><span class="en">Stables Bar</span><span class="sv">Stables Bar</span></span></p><p><span class="en">Please aim to arrive by 12:30 pm.</span><span class="sv">Försök gärna anlända senast kl 12:30.</span></p></div></li>
+      <li><time><span class="en">1:30 pm</span><span class="sv">13:30</span></time><div><p><strong><span class="en">Ceremony</span><span class="sv">Vigsel</span></strong> <span class="place"><span class="en">Garden Room</span><span class="sv">Garden Room</span></span></p><p><span class="en">The main event!</span><span class="sv">Själva höjdpunkten!</span></p></div></li>
+      <li><time><span class="en">2:30 pm</span><span class="sv">14:30</span></time><div><p><strong><span class="en">Drinks &amp; canapés</span><span class="sv">Drinkar &amp; canapéer</span></strong> <span class="place"><span class="en">Castle Barn or Terrace</span><span class="sv">Castle Barn eller terrassen</span></span></p><p><span class="en">Reception drinks will be served within the Castle Barn or on the Terrace (weather permitting).</span><span class="sv">Mottagningsdrinkar serveras i Castle Barn eller på terrassen (väder tillåtande).</span></p></div></li>
+      <li><time><span class="en">4:00 pm</span><span class="sv">16:00</span></time><div><p><strong><span class="en">Wedding breakfast</span><span class="sv">Bröllopsmiddag</span></strong> <span class="place"><span class="en">Castle Barn</span><span class="sv">Castle Barn</span></span></p><p><span class="en">Three-course menu and speeches following the meal.</span><span class="sv">Tre-rätters meny och tal efter måltiden.</span></p></div></li>
+      <li><time><span class="en">7:00 pm</span><span class="sv">19:00</span></time><div><p><strong><span class="en">After dinner tea &amp; coffee</span><span class="sv">Kaffe &amp; te efter middagen</span></strong></p><p><span class="en">While Castle Barn is turned around for the evening party.</span><span class="sv">Medan Castle Barn ställs om inför kvällsfesten.</span></p></div></li>
+      <li><time><span class="en">7:30 pm</span><span class="sv">19:30</span></time><div><p><strong><span class="en">Evening reception</span><span class="sv">Kvällsfest</span></strong> <span class="place"><span class="en">Castle Barn / Terrace</span><span class="sv">Castle Barn / terrassen</span></span></p><p><span class="en">Evening guests welcome from this time. Pizza served approximately 1 hour after first dance.</span><span class="sv">Kvällsgäster välkomna från denna tid. Pizza serveras cirka en timme efter den första dansen.</span></p></div></li>
+      <li><time><span class="en">Midnight</span><span class="sv">Midnatt</span></time><div><p><strong><span class="en">Music finishes, bar open until 12:30</span><span class="sv">Musiken slutar, baren öppen till 00:30</span></strong></p><p><span class="en">Please ensure you have pre-booked a taxi! Resident guests can enjoy a nightcap at the Stables bar and lounge, which closes at 1:30 am.</span><span class="sv">Se till att ni har förbokat en taxi! Boende gäster kan avsluta kvällen med en sängfösare i Stables-baren och loungen, som stänger kl 01:30.</span></p></div></li>
+    </ul>
+    <p class="fineprint"><span class="en">Timings are a guide and may shift slightly on the day. We’ll keep this page updated if anything changes!</span><span class="sv">Tiderna är ungefärliga och kan komma att ändras något under dagen. Vi uppdaterar den här sidan om något förändras!</span></p>
+  </div>
+</section>
+
+
+<section class="block block--travel" id="travel">
+  <div class="panel rv">
+    <span class="eyebrow"><span class="en">Getting here &amp; where to stay</span><span class="sv">Hitta hit &amp; boende</span></span>
+    <h2><span class="en">Travel &amp; Stay</span><span class="sv">Resa &amp; boende</span></h2>
+
+    <div class="item">
+      <h3><span class="en">Address</span><span class="sv">Adress</span></h3>
+      <p>Wasing Park Wedding Venue,<br>Aldermaston,<br>Berkshire,<br>RG7 4NG</p>
+      <p>What3Words: ///secret.inserting.stupidly</p>
+      <div class="map-frame"><iframe title="Venue map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19924.05709512!2d-1.1836320161819376!3d51.37535677108993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876a050d6743735%3A0x46dbdba87923f838!2sWasing%20Park%20Wedding%20Venue!5e0!3m2!1sen!2suk!4v1789921331518!5m2!1sen!2suk" loading="lazy"></iframe></div>
+    </div>
+
+    <div class="item">
+      <h3><span class="en">By car</span><span class="sv">Med bil</span></h3>
+      <p><span class="en">On arrival, continue straight on from the top of the drive, over the crossroads, taking the left-hand turn into the main car park. Take the path from the car park leading to the venue.</span><span class="sv">Vid ankomst, fortsätt rakt fram från toppen av uppfarten, över korsningen, och ta vänster in på den stora parkeringen. Ta stigen från parkeringen som leder till platsen.</span></p>
+      <p><span class="en">Cars can be left overnight, to be collected by 10:30 am the next morning.</span><span class="sv">Bilar kan lämnas över natten och hämtas senast kl 10:30 nästa morgon.</span></p>
+    </div>
+
+    <div class="item">
+      <h3><span class="en">By train</span><span class="sv">Med tåg</span></h3>
+      <h4><span class="en">From London</span><span class="sv">Från London</span></h4>
+      <p><span class="en">Reading is the closest mainline train station with a reliable taxi rank and Uber availability, roughly 25 minutes from the venue.</span><span class="sv">Reading är den närmaste större tågstationen, med pålitliga taxibilar och Uber tillgängligt, cirka 25 minuter från platsen.</span></p>
+      <p><span class="en">There are 25 minute direct trains which run every 15 minutes from Paddington station. Book via the Trainline app or buy tickets at a self-serve kiosk at the station. The Elizabeth line also runs to Reading and takes around 45 minutes, with trains scheduled every 10 minutes.</span><span class="sv">Det går direkttåg på 25 minuter var 15:e minut från Paddington station. Boka via Trainline-appen eller köp biljett i en automat på stationen. Elizabeth line går också till Reading och tar cirka 45 minuter, med avgångar var 10:e minut.</span></p>
+      <h4><span class="en">From Brighton</span><span class="sv">Från Brighton</span></h4>
+      <p><span class="en">The quickest route is via either Reading or Basingstoke station, which are both around a 25 minute taxi ride from the venue. Both stations have Uber and taxi ranks, with plenty of hotel options offering early check-in.</span><span class="sv">Den snabbaste vägen går via antingen Reading eller Basingstoke station, båda cirka 25 minuters taxiresa från platsen. Båda stationerna har Uber och taxi, med flera hotell som erbjuder tidig incheckning.</span></p>
+      <p><span class="en">Alternatively, transfer at Reading to Aldermaston station and pre-book a taxi from there (5 min).</span><span class="sv">Alternativt, byt vid Reading till Aldermaston station och förboka en taxi därifrån (5 min).</span></p>
+    </div>
+
+    <div class="item">
+      <h3><span class="en">Hotels &amp; accommodation</span><span class="sv">Hotell &amp; boende</span></h3>
+      <div class="hotel"><h3><span class="en">Stay at Wasing</span><span class="sv">Bo på Wasing</span></h3>
+      <p><span class="en">There are a limited number of additional rooms available at the venue. Use our code <span class='code'>240927MADDEN</span> to secure your booking via the following link:</span><span class="sv">Det finns ett begränsat antal extra rum tillgängliga på plats. Använd vår kod <span class='code'>240927MADDEN</span> för att säkra er bokning via följande länk:</span></p>
+      <p class="link"><a href="https://bookings-rezcontrol-emea.rdxglobal.com/properties/wasingparkdirect?">https://bookings-rezcontrol-emea.rdxglobal.com/properties/wasingparkdirect</a></p>
+      <p><span class="en">Your stay includes breakfast the following morning, served from 9am for anyone brave enough to face the morning after. Checkout is 10:30 am.</span><span class="sv">I priset ingår frukost morgonen efter, serverad från kl 9 för den som är modig nog att möta morgonen efter. Utcheckning är kl 10:30.</span></p></div>
+<div class="hotel"><h3>The Hind’s Head, Aldermaston</h3><div class="meta"><span class="icon-mono">🚗</span> <span class="en">5 min (2 miles)</span><span class="sv">5 min (3 km)</span></div><p><span class="en">Closest accommodation to the venue; change at Reading if travelling by train. Pre-booking taxis is recommended, and please contact the hotel about early check-in options.</span><span class="sv">Närmaste boende till platsen; byt vid Reading om ni reser med tåg. Förbokning av taxi rekommenderas, och kontakta gärna hotellet om tidig incheckning.</span></p><p class="times"><span class="en">Check in: 3 – 9:30 pm &nbsp;·&nbsp; Check out: 11 am</span><span class="sv">Incheckning: 15:00–21:30 &nbsp;·&nbsp; Utcheckning: 11:00</span></p></div>
+<div class="hotel"><h3>Premier Inn Reading / Basingstoke</h3><div class="meta"><span class="icon-mono">🚗</span> <span class="en">25 min</span><span class="sv">25 min</span></div><p><span class="en">Good option for guests arriving by train from London or Brighton, with early check-in generally available from 11 am to get changed before the ceremony.</span><span class="sv">Bra alternativ för gäster som anländer med tåg från London eller Brighton, med tidig incheckning vanligtvis tillgänglig från kl 11 för att hinna byta om innan vigseln.</span></p><p class="times"><span class="en">Check out: noon</span><span class="sv">Utcheckning: 12:00</span></p></div>
+<div class="hotel"><h3>Holiday Inn Reading / Basingstoke</h3><div class="meta"><span class="icon-mono">🚗</span> <span class="en">10 min</span><span class="sv">10 min</span></div><p class="times"><span class="en">Check in: 3 pm &nbsp;·&nbsp; Check out: noon</span><span class="sv">Incheckning: 15:00 &nbsp;·&nbsp; Utcheckning: 12:00</span></p></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="block" id="faq">
+  <div class="inner rv">
+    <span class="eyebrow"><span class="en">Good to know</span><span class="sv">Bra att veta</span></span>
+    <h2><span class="en">FAQs</span><span class="sv">Vanliga frågor</span></h2>
+    <div class="faq-item"><h3><span class="en">What time should I arrive?</span><span class="sv">Vilken tid bör jag anlända?</span></h3><p><span class="en">Please aim to arrive by 12 pm in case of any delays. The ceremony will begin at 1:30 pm.</span><span class="sv">Försök gärna anlända senast kl 12 om något skulle bli försenat. Vigseln börjar kl 13:30.</span></p></div>
+<div class="faq-item"><h3><span class="en">What’s the dress code?</span><span class="sv">Vad är klädkoden?</span></h3><p><span class="en">Smart dress, no specific theme. The venue has gravel walkways, so flat or block-heeled shoes are a good idea.</span><span class="sv">Smart — inget särskilt tema. Det finns grusgångar på platsen, så platta skor eller klackar med bred klack är en bra idé.</span></p></div>
+<div class="faq-item"><h3><span class="en">Will there be parking?</span><span class="sv">Finns det parkering?</span></h3><p><span class="en">There are plenty of parking spaces available and cars can be left overnight. Please ensure you collect your car by 10:30 am the next morning. See <a href="#travel">Travel &amp; Stay</a> for the venue address and directions to the car park.</span><span class="sv">Det finns gott om parkeringsplatser och bilar kan lämnas över natten. Se till att hämta bilen senast kl 10:30 nästa morgon. Se <a href="#travel">Resa &amp; boende</a> för adress och vägbeskrivning till parkeringen.</span></p></div>
+<div class="faq-item"><h3><span class="en">I have an allergy / dietary requirement</span><span class="sv">Jag har en allergi/specialkost</span></h3><p><span class="en">Please list any food intolerances or allergies in your RSVP form. You can also select a vegetarian meal option or children’s menu there. See <a href="#venue">Venue &amp; Details</a> for the full menu.</span><span class="sv">Ange eventuell matallergi eller intolerans i OSA-formuläret. Ni kan även välja ett vegetariskt alternativ eller barnmeny där. Se <a href="#venue">Plats &amp; detaljer</a> för hela menyn.</span></p></div>
+<div class="faq-item"><h3><span class="en">Is there a gift registry?</span><span class="sv">Finns det en önskelista?</span></h3><p><span class="en">Having you here is the main thing! But if you’d like to give a gift, we’d love a contribution towards our honeymoon.</span><span class="sv">Att ni är där betyder mest för oss! Men om ni vill ge oss en gåva, skulle vi uppskatta ett bidrag till vår smekmånad.</span></p>
+      <p><span class="en">Cash is fine and our bank details are below:</span><span class="sv">Kontanter går bra, och våra bankuppgifter finns nedan:</span></p>
+      <p class="bank"><strong><span class="en">UK</span><span class="sv">Storbritannien</span>:</strong><br>Sort code: 04-00-04<br><span class="en">Acct No</span><span class="sv">Kontonummer</span>: 62362661</p>
+      <p class="bank"><strong><span class="en">International</span><span class="sv">Internationellt</span>:</strong><br>IBAN: GB62 MONZ 0400 0462 3626 61<br>BIC: MONZGB2L</p>
+      <p class="bank"><strong>PayPal:</strong><br></p></div>
+<div class="faq-item"><h3><span class="en">Other questions?</span><span class="sv">Andra frågor?</span></h3><p><span class="en">Message us and we’ll get back to you.</span><span class="sv">Skicka oss ett meddelande så återkommer vi.</span></p></div>
+  </div>
+</section>
+
+
+<section class="block" id="rsvp">
+  <div class="inner rv">
+    <span class="eyebrow"><span class="en">We hope you can join us</span><span class="sv">Vi hoppas att ni kan komma</span></span>
+    <h2><span class="en">RSVP</span><span class="sv">OSA</span></h2>
+    <p class="rsvp-lead"><span class="en">RSVP by 1 Dec 2026.</span><span class="sv">OSA senast 1 december 2026.</span> <span class="en">Please submit one response per guest.</span><span class="sv">Vänligen skicka ett svar per gäst.</span></p>
+    <p class="form-note sv">Observera: formuläret nedan är på engelska.</p>
+    <div class="form"><iframe title="RSVP form" src="https://docs.google.com/forms/d/e/1FAIpQLScupy2JUd-cykqfeErOnq9wyofJVuyQUVk955D7H5VM9z4QGA/viewform?embedded=true" loading="lazy">Loading…</iframe></div>
+    <p class="fineprint"><span class="en">Trouble with the form? Email us at</span><span class="sv">Problem med formuläret? Maila oss på</span> <a href="mailto:ames.hanna@gmail.com">ames.hanna@gmail.com</a></p>
+  </div>
+</section>
+
+  </main>
+
+  <footer>
+    <div class="names">Hanna &amp; Niall</div>
+    <div>24 · 09 · 2027</div>
+    <button type="button" class="en" data-switch-lang="sv">Svenska</button>
+    <button type="button" class="sv" data-switch-lang="en">English</button>
+  </footer>
+
+</div>
+
+</body>
+</html>
